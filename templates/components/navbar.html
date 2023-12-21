@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'main' %}"> Книжный магазин</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'main' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item cenres_card">
+                <a id="cenres_link" class="nav-link cenres_link" href="">Жанры</a>
+                <div id="cenres" class="cenres d-none">
+                    {% for genre in genres %}
+                        <div class="cenre">
+                            <a href="{% url 'books_by_genre' id=genre.id %}">{{ genre.name }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </li> 
+        </ul>
+        <form class="d-flex" action="{% url 'main' %}" method='GET'>
+            <input class="form-control me-2" name='search' type="search" placeholder="Поиск" value='{{ request.GET.search }}' aria-label="search">
+            <button class="btn btn-outline-success" type="submit">Поиск</button>
+        </form>
+        </div>
+    </div>
+</nav>

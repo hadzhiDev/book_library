@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  | {{ book.name }}
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="card1">
+            <h1 class="text-center">{{ book.name }}</h1>
+            <div class="card_inner">
+                <div class="book_image">
+                    <img src="{{  book.inner_image.url}}" class="w-100" alt="">
+                </div>
+                <div>
+                    <div >
+                        <div><b>Автор книги:</b> {{ book.author.full_name }} ({{ book.author.born_and_death }})</div>
+                        <p class="card-text"><b>Краткое содержание:</b> {{ book.description|safe}}</p>
+                        <a class="read_btn read_btn2" href="{{ book.file.url }}">открыть pdf-файл</a>
+                    </div>
+                    <div class="text-end book_date">
+                        <p>дата добавления: {{ book.date }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

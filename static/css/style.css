@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    padding-block: 40px;
+    min-height: 70vh;
+}
+
+.home_card{
+    height: 550px;
+    position: relative;
+    background-color:rgb(255, 241, 209) ;
+    border-radius: 15px;
+}
+
+.card_inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.home_book_card img{
+    height: 380px;
+}
+
+.book_image img{
+    max-height: 90vh !important;
+}
+
+.book_date{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.read_btn{
+    position: absolute;
+    bottom: 20px;
+    text-decoration: none;
+    background-color: burlywood;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.read_btn2{
+    bottom: 0;
+}
+
+.read_btn:hover{
+    filter: brightness(120%);
+    color: #000;
+}
+
+.read_btn:active{
+    filter: brightness(90%);
+}
+
+.cenres_card{
+    position: relative;
+}
+
+.cenres{
+    z-index: 3;
+    display: grid;
+    background-color: #212529 !important;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    row-gap: 20px;
+    top: 48px;
+    left: 0;
+    padding: 8px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* .cenres_card:active .cenres{
+    display: block !important;
+} */
+
+.cenre{
+    width: 150px;
+    color: #9B9D9E;
+}
+
+.cenre a{
+    color: #9B9D9E;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.cenre a:hover{
+    color: #fff;
+}
