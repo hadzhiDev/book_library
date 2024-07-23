@@ -12,8 +12,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
-            <li class="nav-item cenres_card">
-                <a id="cenres_link" class="nav-link cenres_link" href="">Жанры</a>
+            <li class="nav-item cenres_card" id="cenres_card">
+                <div>
+                    <a id="cenres_link" class="nav-link cenres_link" href="">Жанры</a>
+                </div>
                 <div id="cenres" class="cenres d-none">
                     {% for genre in genres %}
                         <div class="cenre">

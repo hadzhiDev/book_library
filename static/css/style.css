@@ -74,7 +74,7 @@ main {
     grid-template-columns: 1fr 1fr;
     position: absolute;
     row-gap: 20px;
-    top: 48px;
+    top: 40px;
     left: 0;
     padding: 8px;
     border-radius: 0 0 10px 10px;
